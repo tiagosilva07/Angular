@@ -36,3 +36,5 @@ After this you can go inside project folder and run the npm install to be able t
 ### Content
 - Section 1: Introduction to Angular
     - Create an App, Project Structure, Custom HTML Elements, Models, Views
+- Section 2: 
+    - Angular Components, Core Directives and Pipes
