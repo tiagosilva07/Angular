@@ -32,3 +32,7 @@ For more detailed overview i suggest to check the oficial Angular documentation:
 - [Angular Cli](https://angular.io/cli)
 
 After this you can go inside project folder and run the npm install to be able to install all dependencies needed to run this  project 
+
+### Content
+- Section 1: Introduction to Angular
+    - Create an App, Project Structure, Custom HTML Elements, Models, Views
