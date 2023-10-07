@@ -11,6 +11,8 @@ export class AppComponent {
 
   coursesList = COURSES;
 
+  startDate = new Date(2000,0,1);
+
   onCourseSelected(course: Course){
     console.log(course)
   }
