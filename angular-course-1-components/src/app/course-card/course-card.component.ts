@@ -11,7 +11,7 @@ export class CourseCardComponent implements OnInit {
 
   @Input({ required: true })
   course: Course;
-  @Input({ required: true })
+  @Input({ required: false })
   cardIndex: number;
   @Output('courseSelected')
   courseEmitter = new EventEmitter<Course>();

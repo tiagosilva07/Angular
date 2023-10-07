@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +12,10 @@ export class AppComponent {
 
   coursesList = COURSES;
 
-  startDate = new Date(2000,0,1);
+  @ViewChild(CourseCardComponent)
+  card: CourseCardComponent;
 
   onCourseSelected(course: Course){
-    console.log(course)
+    console.log(this.card)
   }
 }
