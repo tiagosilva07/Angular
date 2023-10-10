@@ -38,3 +38,7 @@ After this you can go inside project folder and run the npm install to be able t
     - Create an App, Project Structure, Custom HTML Elements, Models, Views
 - Section 2: 
     - Angular Components, Core Directives and Pipes
+- Section 3: 
+    - Angular Local Template Querying in Depth
+- Section 4: 
+    - Angular Content Projection In Depth
