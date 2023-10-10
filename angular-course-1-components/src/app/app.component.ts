@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
 import { CourseCardComponent } from './course-card/course-card.component';
@@ -8,26 +8,24 @@ import { CourseCardComponent } from './course-card/course-card.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
   coursesList = COURSES;
   //Component
-  @ViewChild(CourseCardComponent)
-  card: CourseCardComponent;
-  //By template ref
   @ViewChild('cardRef')
-  card2: CourseCardComponent;
-  //Get component in html element 
-  @ViewChild('cardRef2',{read: ElementRef} )
-  card3: ElementRef;
-  //Get html element 
-  @ViewChild('cardRef3')
-  card4: ElementRef;
+  card: CourseCardComponent;
+  @ViewChild('container')
+  containerDid: ElementRef;
+
+  constructor(){
+  }
+
+  ngAfterViewInit() {
+    console.log("Container Div", this.card)
+  }
 
   onCourseSelected(course: Course){
     console.log(this.card)
-    console.log(this.card2)
-    console.log(this.card3)
-    console.log(this.card4)
+
   }
 }
