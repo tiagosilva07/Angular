@@ -4,9 +4,15 @@
          src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
 </div>
-<button (click)="onCoursesEdited()">Edit Courses</button>
-<div class="courses" #container>  
-    <course-card *ngFor="let course of coursesList" (courseSelected)="onCourseSelected($event)" 
+
+<div class="courses" *ngIf="coursesList[0] as course">  
+    <course-card (courseSelected)="onCourseSelected($event)" 
     [course]="course">
+    <div class="course-image">
+        <img width="300" alt="Angular logo" [src]="course.iconUrl">
+    </div>
+    <div class="course-description">
+        {{course.longDescription}}
+    </div>
     </course-card>
 </div>
